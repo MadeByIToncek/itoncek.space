@@ -61,7 +61,7 @@ params:
     responsiveImages: true
 
   editPost:
-    URL: "https://github.com/MadeByIToncek/madebyitoncek.github.io/tree/main/content/"
+    URL: "https://codeberg.org/itoncek/pages/src/branch/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
