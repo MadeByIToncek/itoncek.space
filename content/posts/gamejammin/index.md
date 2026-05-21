@@ -30,8 +30,30 @@ For context, this [jam](https://itch.io/jam/matfyz-game-jam-spring-2026) is part
 The start of the journey was very wobbly. First, one of our original members had to skip the jam due to some scheduling issues. Then, right before the start, the metro station's escalator got blocked, so I had to maneuver through the center of Prague just to get to the MS building. Luckily, I managed to catch a bus, that brought me all the way to Malostranské náměstí bus stop.
 
 {{< figure
-  src="/posts/gamejammin/images/jam_banner.png"
-  alt="GameJam banner"
-  caption=""
+  src="/posts/gamejammin/images/minibus.jpg"
+  alt="Minibus on the bus line 193"
+  caption="This is the cute \"bus\" that saved my day"
   class="ma0 w-75"
 >}}
+
+After I got to the MS building, I realised, that I forgot my power brick at my dorms *twenty tram minutes away*. What can I do, except ride twenty minutes there, pick-up the power brick, check the Raspberry Pi 3 hosting the git server we'll be using for the game jam and ride twenty minutes back.
+
+From then, it was mostly smooth sailing. We've set up our jam site in the S7 room and went into S3 for the initial talk. We got told some misc info like how to get into the building, what not to do and where to get snacks. And then came the theme announcement...
+# Over the top ... and what do we do with that.
+This was harder than I imagined. On the previous jam that I participated in, I got the idea almost immidiately after hearing the theme but this time, nothing.
+
+We moved back into S7 and got to brainstorming. Mountains have tops! You can be thrown over on a ship? Maybe something with some clothes? What about computer windows? That could work...
+
+{{< rawhtml >}} 
+<figure class="ma0 w-75">
+  <video width=100% controls>
+    <source src="/posts/gamejammin/images/first_demo.webm" type="video/webm">
+    Your browser does not support the video tag.  
+  </video>
+  <figcaption>
+    <p>First demo of the "window mechanic"</p>
+  </figcaption>
+</figure>
+{{< /rawhtml >}}
+
+Okay that works pretty good. Could we make a puzzle platformer with that? *And that is the origin of the Window Wizard concept*.
