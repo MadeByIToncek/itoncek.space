@@ -1,0 +1,136 @@
+[build]
+publish = "public"
+command = "hugo --gc --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.148.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+command = "hugo --gc --minify"
+
+[context.split1.environment]
+HUGO_VERSION = "0.148.0"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "hugo --gc --minify -D -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.148.0"
+
+[context.branch-deploy]
+command = "hugo --gc --minify -D -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.148.0"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from = "/arc-sw.js"
+  to = "https://arc.io/arc-sw.js"
+  status = 200
+  
+[[redirects]]
+  from = "/zatmeni"
+  to = "https://youtu.be/3XJz9aw2k4k"
+  status = 301
+
+[[redirects]]
+  from = "/beta"
+  to = "https://deploy-preview-3--itoncek.netlify.app/"
+  status = 301
+  
+[[redirects]]
+  from = "/zatmeni"
+  to = "https://youtu.be/3XJz9aw2k4k"
+  status = 301
+    
+[[redirects]]
+  from = "/oxikomania"
+  to = "https://discord.gg/wG9trXHZBv"
+  status = 301
+   
+[[redirects]]
+  from = "/sts107"
+  to = "https://astrocrew.itoncek.cf/sts107/"
+  status = 301
+    
+[[redirects]]
+  from = "/youtube"
+  to = "https://www.youtube.com/@ajtoncek"
+  status = 301
+  
+[[redirects]]
+  from = "/scenar_old"
+  to = "https://1url.cz/v1Je0"
+  status = 301
+  
+[[redirects]]
+  from = "/scenar"
+  to = "https://cdn.itoncek.space/scenar_new.pdf"
+  status = 301
+  
+[[redirects]]
+  from = "/scenar_html"
+  to = "https://cdn.itoncek.space/scenar_new.html"
+  status = 301
+  
+[[redirects]]
+  from = "/scenar_fdx"
+  to = "https://cdn.itoncek.space/scenar_new.fdx"
+  status = 301
+  
+[[redirects]]
+  from = "/nlcmonitor.ps1"
+  to = "https://github.com/MadeByIToncek/NLCMonitor/raw/master/install.ps1"
+  status = 200
+
+[[redirects]]
+  from = "/npmjs/*"
+  to = "/npmjs/"
+  status = 301
+
+[[redirects]]
+  from = "/walmat/sponzori"
+  to = "https://docs.google.com/spreadsheets/d/1aALoJM19svLXH6vQnTALE0lbSGt4bnCVo3MfxwoHnPA/edit?usp=sharing"
+  status = 301
+
+[[redirects]]
+  from = "/iql/feustel"
+  to = "https://iqlandia.cz/co-se-u-nas-deje/iqcafe-andrew-feustel"
+  status = 301
+
+[[redirects]]
+  from = "/walmat/serpokecy"
+  to = "https://docs.google.com/spreadsheets/d/10LKpCy9aAWNVTsK_6eHQxDvArTmN369r7YR2gnfbB4Q/edit?usp=drivesdk"
+  status = 301
+
+[[redirects]]
+  from = "/walmat/serpovani"
+  to = "https://waldorfsemilycz-my.sharepoint.com/:p:/g/personal/antonin_vrestal_waldorf_semily_cz/EbxzYmP58KJLshTYavp-vv4BYVxZ5z_t8diT8XLKmwhtCA?e=tOatmu"
+  status = 301
+
+[[redirects]]
+  from = "/walmat/predtanceni2"
+  to = "https://youtu.be/-6z9x-E9W5w"
+  status = 301
+
+[[redirects]]
+  from = "/walmaturita/matika"
+  to = "https://waldorfsemilycz-my.sharepoint.com/:w:/g/personal/antonin_vrestal_waldorf_semily_cz/EUd0C6QOdttLo9a09e6lIxMBUNwajMrWRmyp56FIz9rrBw?e=n0RrTP"
+  status = 301
+
+[[redirects]]
+  from = "/maturita/strava"
+  to = "https://docs.google.com/spreadsheets/d/1M3RA_9J8XewasE2vx27m9DUDOlQdv0nYx5P6xi0r7zo/edit?usp=sharing"
+  status = 301
+
+[[redirects]]
+  from = "/waldorf/darky_ucitelum"
+  to = "https://docs.google.com/spreadsheets/d/1hTW12U2gda417ukEXoLc65bhTh8aT0fxPP40YswjnCI/edit?usp=sharing"
+  status = 301
+

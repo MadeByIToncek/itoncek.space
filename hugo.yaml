@@ -1,0 +1,114 @@
+baseURL: "https://itoncek.space/"
+title: IToncek.space
+pagination:
+  pagerSize:  5
+theme: PaperMod
+
+services:
+  googleAnalytics:
+    id: G-VM37GF7PYP
+
+enableRobotsTXT: true
+
+minify:
+  disableXML: false
+  minifyOutput: true
+
+taxonomies:
+  category: categories
+  tag: tags
+
+copyright: © 2024 IToncek
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: IToncek.space
+  description: "Personal blog 'n stuff"
+  keywords: [IToncek]
+  author: IToncek
+  # author: ["Me", "You"] # multiple authors
+  #images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "02. 01. 2006"
+  defaultTheme: dark # dark, light
+  disableThemeToggle: false
+  ShowCodeCopyButtons: true
+  math: true
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: IToncek's blog
+    subtitle: "or something, I don't really know"
+    imageUrl: "https://cdn.discordapp.com/avatars/580098459802271744/c0b662788cc184d4a7e3fb900df1fe19.webp?size=512"
+    imageWidth: 256
+    imageHeight: 256
+    imageTitle: my pfp
+    buttons:
+      - name: Posts
+        url: posts
+
+  socialIcons:
+    - name: instagram
+      url: "https://www.instagram.com/itoncek/"
+    - name: email
+      url: "mailto:itoncek@itoncek.space"
+    - name: x
+      url: "https://x.com/ajToncek"
+    - name: github
+      url: "https://github.com/MadeByIToncek"
+
+  cover:
+    responsiveImages: true
+
+  editPost:
+    URL: "https://github.com/MadeByIToncek/madebyitoncek.github.io/tree/main/content/"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+menu:
+  main:
+    - identifier: posts
+      name: posts
+      url: /posts/
+      weight: 1
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 30
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - '\['
+            - '\]'
+          - - $$
+            - $$
+          inline:
+          - - '\('
+            - '\)'
+          - - '$'
+            - '$'
+        enable: true
+  
+outputs:
+  home:
+  - html
+  - rss
+  section:
+  - html
+  - rss
+  taxonomy:
+  - html
+  term:
+  - html
