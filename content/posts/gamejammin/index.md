@@ -16,14 +16,14 @@
 
 I'm studying at a university now. During the winter semester, I had heard about some university-organised game jam, that I could get some credit for. As you *might* have seen on this page before, I have some history working with Godot. So at the start of the summer semester, I've talked to my friends and together, we joined the summer jam.
 
-For context, this [jam](https://itch.io/jam/matfyz-game-jam-spring-2026) is part of the game development course at MFF CUNI, where I study. The assignment is to develop a game with a specified theme within 48 hours. We can be physically at the Malostranská (MS) building  or online, or wherever we want. At the 48 hour deadline, the submissions close (anything submitted after 48 hours doesn't count). For the week after that, there is a community voting period, where we are encouraged to play each-other's games and vote on them in five categories.
-
 {{< figure
   src="/posts/gamejammin/images/jam_banner.png"
   alt="GameJam banner"
   caption=""
   class="ma0 w-75"
 >}}
+
+For context, this [jam](https://itch.io/jam/matfyz-game-jam-spring-2026) is part of the game development course at MFF CUNI, where I study. The assignment is to develop a game with a specified theme within 48 hours. We can be physically at the Malostranská (MS) building  or online, or wherever we want. At the 48 hour deadline, the submissions close (anything submitted after 48 hours doesn't count). For the week after that, there is a community voting period, where we are encouraged to play each-other's games and vote on them in five categories.
 
 # Our journey
 
@@ -57,3 +57,8 @@ We moved back into S7 and got to brainstorming. Mountains have tops! You can be 
 {{< /rawhtml >}}
 
 Okay that works pretty good. Could we make a puzzle platformer with that? *And that is the origin of the Window Wizard concept*.
+
+***I'd like to warn you, that there may be spoilers ahead, if you want to play our game blind, please head over to [itoncek.itch.io/window-wizard](https://itoncek.itch.io/window-wizard) and play the game before continuing***
+
+# Window Wizard and Window Manager
+So... how does it work. You can see the basic implementation of this effect in the video above.
