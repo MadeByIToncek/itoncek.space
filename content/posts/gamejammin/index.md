@@ -65,7 +65,7 @@ So... how does it work. You can see the basic implementation of this effect in t
 
 All the levels are built using primitive templating technology. You create the layout in the editor. Then, at runtime, the scene gets finalized with remaining objects, such as cameras, tintboxes (the things that apply color to the windows) and other unnecessary things. 
 
-Template scene has the `SceneTemplate.cs` as the root. The root node then has numerous inputs for different things we'd need access to when finalizing at runtime. Notably we 
+Template scene has the `SceneTemplate.cs` as the root. The root node then has numerous inputs for different things we'd need access to when finalizing at runtime. Notably we have three groups of nodes, each one is associated with one color layer, which determine what should be cropped. Also at this stage, we specify the inital position of all windows.
 
 {{< figure
   src="/posts/gamejammin/images/templating.png"
