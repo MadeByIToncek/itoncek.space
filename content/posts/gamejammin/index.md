@@ -61,4 +61,17 @@ Okay that works pretty good. Could we make a puzzle platformer with that? *And t
 ***I'd like to warn you, that there may be spoilers ahead, if you want to play our game blind, please head over to [itoncek.itch.io/window-wizard](https://itoncek.itch.io/window-wizard) and play the game before continuing***
 
 # Window Wizard and Window Manager
-So... how does it work. You can see the basic implementation of this effect in the video above.
+So... how does it work. You can see the basic implementation of this effect in the video above. The mechanic is simple, you have three windows, obstacles are visible only in same-colored windows, you can only interact with visible obstacles* *(asterisk for later)*.
+
+All the levels are built using primitive templating technology. You create the layout in the editor. Then, at runtime, the scene gets finalized with remaining objects, such as cameras, tintboxes (the things that apply color to the windows) and other unnecessary things. 
+
+Template scene has the `SceneTemplate.cs` as the root. The root node then has numerous inputs for different things we'd need access to when finalizing at runtime. Notably we 
+
+{{< figure
+  src="/posts/gamejammin/images/templating.png"
+  alt="Preview of the templating view in Godot"
+  caption="Preview of the template inside Godot."
+  class="ma0 w-75"
+>}}
+
+The windowing effect is achieved, you guessed it, ***using windows***. At level instantiation, `WindowManager.cs` spawns three/two windows and assigns them subviewports linked to the main scene. This way, the windows can independently render different parts of the scene. 
