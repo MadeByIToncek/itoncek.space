@@ -28,7 +28,7 @@ params:
   author: IToncek
   # author: ["Me", "You"] # multiple authors
   #images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "02. 01. 2006"
+  DateFormat: "2006-02-01"
   defaultTheme: dark # dark, light
   disableThemeToggle: false
   ShowCodeCopyButtons: true
@@ -39,7 +39,7 @@ params:
     enabled: true # needs to be explicitly set
     title: IToncek's blog
     subtitle: "or something, I don't really know"
-    imageUrl: "https://cdn.discordapp.com/avatars/580098459802271744/c0b662788cc184d4a7e3fb900df1fe19.webp?size=512"
+    imageUrl: "/profilovka_pride.png"
     imageWidth: 256
     imageHeight: 256
     imageTitle: my pfp
@@ -48,14 +48,14 @@ params:
         url: posts
 
   socialIcons:
-    - name: instagram
-      url: "https://www.instagram.com/itoncek/"
+    - name: matrix
+      url: "https://matrix.to/#/@itoncek:itoncek.space"
+    - name: bluesky
+      url: "https://bsky.app/profile/itoncek.space"
+    - name: codeberg
+      url: "https://codeberg.org/itoncek"
     - name: email
-      url: "mailto:itoncek@itoncek.space"
-    - name: x
-      url: "https://x.com/ajToncek"
-    - name: github
-      url: "https://github.com/MadeByIToncek"
+      url: "mailto:site@itoncek.space"
 
   cover:
     responsiveImages: true
