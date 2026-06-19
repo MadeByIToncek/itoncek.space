@@ -181,3 +181,23 @@ The comments were all praising the game but the review said otherwise. I was exp
 
 Seeing this table, I didn't expected anything from the final results from the judges. I certainly did not expect, that our game **WON?!**
 
+{{< figure
+  src="/posts/gamejammin/images/victory_pic2.jpg"
+  alt="GameJam banner"
+  caption="Me and @madlain after the announcement."
+  class="ma0 w-75"
+>}}
+
+I, in my infinite wisdom, went for dinner before coming to the party and one of our prizes was a paid dinner at that place. Rest assured, I've eaten as much as I could and enjoyed every single bite.
+
+# Epilogue
+
+It has been almost two months. I still can't believe that we managed to pull that off. It has been amazing to develop with that team and I can't wait to attend the next game jam in autumn. 
+
+Thank you to all the members of the team (@madlain, @equist, @bohemic_boy), to all the testers who played our game (either in person or online) and thank **you**, for reading this post
+
+{{< rawhtml >}} 
+<p align="right">
+- Toncek
+</p>
+{{< /rawhtml >}}
