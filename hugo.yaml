@@ -18,7 +18,7 @@ taxonomies:
   category: categories
   tag: tags
 
-copyright: © 2024 IToncek
+copyright: IToncek © 2026
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
