@@ -32,6 +32,7 @@ params:
   defaultTheme: dark # dark, light
   disableThemeToggle: false
   ShowCodeCopyButtons: true
+  ShowReadingTime: true
   math: true
 
   # profile-mode

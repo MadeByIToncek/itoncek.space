@@ -1,6 +1,6 @@
 {
     "title": "Gamejammin'",
-    "date": "2026-06-01T18:10:00+02:00",
+    "date": "2026-08-01T18:10:00+02:00",
     "cover": {
         "image":"/posts/gamejammin/images/window_wizard.png",
         "alt": "Window wizard thumbnail",
@@ -73,7 +73,7 @@ Okay, that works out pretty well. Could we make a puzzle platformer with that? *
 ***I'd like to warn you that there may be spoilers ahead. If you want to play our game blind, please head over to [itoncek.itch.io/window-wizard](https://itoncek.itch.io/window-wizard) and play the game before continuing***
 
 # How to make a Window Wizard
-The mechanic is simple, you have three windows, obstacles are visible only in same-colored windows, you can only interact with visible obstacles* *(asterisk for later)*.
+The mechanic is simple, you have three windows, obstacles are visible only in same-colored windows, you can only interact with visible obstacles.
 
 The first order of business was to make *something* that worked. In the first 6 hours, we managed to make *something* that *mostly* worked.
 
@@ -164,7 +164,7 @@ The windowing effect is achieved, you guessed it, ***using windows***. At level 
 
 The magic (disappearing platforms) happens using a shader and a clever trick. For each colour layer, we create a [CanvasGroup](https://docs.godotengine.org/en/stable/classes/class_canvasgroup.html) node with a magic material, which takes `rect_min` and `rect_max` as parameters and makes things outside this rectangle transparent. 
 
-As for the collisions, they are handled using a clever trick. Instead of the platforms doing the disappearing, it is the player who decides what to collide with based on the windows it is currently visible in. This introduces a weird effect: when a window is placed over half of an obstacle vertically, it causes the wizard to "jump" up and down, as it gets the physics nudge upwards only when it enters the relevant window, but doesn't "feel" anything when outside of it. *(this is the asterisk from before)*
+As for the collisions, they are handled using a clever trick. Instead of the platforms doing the disappearing, it is the player who decides what to collide with based on the windows it is currently visible in. This introduces a weird effect: when a window is placed over half of an obstacle vertically, it causes the wizard to "jump" up and down, as it gets the physics nudge upwards only when it enters the relevant window, but doesn't "feel" anything when outside of it.
 
 # The aftermath
 
