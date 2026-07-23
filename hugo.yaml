@@ -97,7 +97,10 @@ markup:
           - - '$'
             - '$'
         enable: true
-  
+
+sitemap:
+  disable: true
+
 outputs:
   home:
   - html
