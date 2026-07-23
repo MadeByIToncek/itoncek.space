@@ -1,6 +1,6 @@
 {
     "title": "Gamejammin'",
-    "date": "2026-08-01T18:10:00+02:00",
+    "date": "2026-07-23T16:40:00+02:00",
     "cover": {
         "image":"/posts/gamejammin/images/window_wizard.png",
         "alt": "Window wizard thumbnail",
