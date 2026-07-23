@@ -4,10 +4,6 @@ pagination:
   pagerSize:  5
 theme: PaperMod
 
-services:
-  googleAnalytics:
-    id: G-VM37GF7PYP
-
 enableRobotsTXT: true
 
 minify:
