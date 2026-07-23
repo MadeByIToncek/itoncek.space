@@ -7,5 +7,6 @@ cover.image = "/ir_blueberry.jpg"
 cover.alt = "One of my analog photos, still on the film"
 cover.caption = "Blueberries in analog"
 cover.relative = false 
+draft = true
 +++
 So I finally did it. This is my new page style. I'll try to post some updates here but idk how that goes ;)
