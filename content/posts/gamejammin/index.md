@@ -11,7 +11,7 @@
       "Cool stuff"
     ],
     "tags": ["Game jams", "Development"],
-    "draft": true
+    "draft": false
 }
 
 I'm stu**dying** at a university now. During the winter semester, I heard about a university-organised game jam for which I could earn some credit. As you *might* have seen on this page before, I have some history working with Godot. So at the start of the summer semester, I talked to my friends, and together, we joined the summer jam.
