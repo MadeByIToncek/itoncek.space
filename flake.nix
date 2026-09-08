@@ -1,0 +1,70 @@
+{
+  description = "IToncek.space site";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  };
+
+  outputs = { self, nixpkgs }:
+    let
+      supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
+      pkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
+    in
+    {
+      packages = forAllSystems (system: {
+        default = pkgsFor.${system}.stdenv.mkDerivation {
+          pname = "itoncek-space";
+          version = "1.0.0";
+          src = ./.;
+
+          nativeBuildInputs = [ pkgsFor.${system}.hugo ];
+
+          buildPhase = ''
+            # Hugo requires a writable cache directory
+            export HUGO_CACHE_DIR=$(mktemp -d)
+            
+            # Generate the static site
+            hugo --minify --gc
+          '';
+
+          installPhase = ''
+            # Copy the generated `public` folder to the Nix store output
+            mkdir -p $out
+            cp -r public/* $out/
+          '';
+        };
+      });
+
+      devShells = forAllSystems (system: {
+        default = pkgsFor.${system}.mkShell {
+          packages = [ 
+            pkgsFor.${system}.hugo 
+            pkgsFor.${system}.go
+          ];
+        };
+      });
+
+      nixosModules.default = { config, lib, pkgs, ... }: {
+        options.services.itoncek-space = {
+          enable = lib.mkEnableOption "Serve";
+          domain = lib.mkOption {
+            type = lib.types.str;
+            example = "itoncek.space";
+            description = "Domain name";
+          };
+        };
+
+        config = lib.mkIf config.services.itoncek-space.enable {
+          services.caddy.enable = true;
+
+          services.caddy.virtualHosts.${config.services.itoncek-space.domain} = {
+            extraConfig = ''
+              root * ${self.packages.${pkgs.stdenv.hostPlatform.system}.default}
+              file_server
+            '';
+          };
+        };
+      };
+    };
+}
