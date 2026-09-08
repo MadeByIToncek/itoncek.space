@@ -3,9 +3,14 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    papermod-theme = {
+      url = "github:adityatelange/hugo-PaperMod";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, papermod-theme }:
     let
       supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
@@ -21,15 +26,13 @@
           nativeBuildInputs = [ pkgsFor.${system}.hugo ];
 
           buildPhase = ''
-            # Hugo requires a writable cache directory
             export HUGO_CACHE_DIR=$(mktemp -d)
-            
-            # Generate the static site
+            mkdir -p themes/PaperMod
+            cp -r ${papermod-theme}/* themes/PaperMod/
             hugo --minify --gc
           '';
 
           installPhase = ''
-            # Copy the generated `public` folder to the Nix store output
             mkdir -p $out
             cp -r public/* $out/
           '';
