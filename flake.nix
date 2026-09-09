@@ -63,8 +63,8 @@
 
           services.caddy.virtualHosts.${config.services.itoncek-space.domain} = {
             extraConfig = ''
-              respond /.well-known/matrix/client "{"m.homeserver":{"base_url":"https://matrix.itoncek.space/"}}" 200
-              respond /.well-known/matrix/server "{"m.server":"matrix.itoncek.space:443"}" 200
+              respond /.well-known/matrix/client "{\"m.homeserver\":{\"base_url\":\"https://matrix.itoncek.space/\"}}" 200
+              respond /.well-known/matrix/server "{\"m.server\":\"matrix.itoncek.space:443\"}" 200
               root * ${self.packages.${pkgs.stdenv.hostPlatform.system}.default}
               file_server
             '';
